@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sample</title>
+  <style>
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1f2328;
+  background-color: #ffffff;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #0d1117;
+}
+
+h1 {
+  font-size: 2em;
+  border-bottom: 1px solid #d0d7de;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.5em;
+  border-bottom: 1px solid #d0d7de;
+  padding-bottom: 0.3em;
+}
+
+h3 { font-size: 1.25em; }
+h4 { font-size: 1em; }
+h5 { font-size: 0.875em; }
+h6 { font-size: 0.85em; color: #59636e; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+a {
+  color: #0969da;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: #0550ae;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.875em;
+}
+
+:not(pre) > code {
+  background-color: #f6f8fa;
+  border: 1px solid #d0d7de;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+pre {
+  background-color: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-top: 0;
+  margin-bottom: 1em;
+  line-height: 1.45;
+}
+
+pre code {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+blockquote {
+  margin: 1em 0;
+  padding: 0 1em;
+  color: #59636e;
+  border-left: 0.25em solid #d0d7de;
+}
+
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-left: 2em;
+}
+
+li {
+  margin-bottom: 0.25em;
+}
+
+li > ul, li > ol {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+hr {
+  height: 1px;
+  background-color: #d0d7de;
+  border: 0;
+  margin: 2em 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0d1117;
+    color: #e6edf3;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+  }
+  h1, h2 {
+    border-bottom-color: #30363d;
+  }
+  blockquote {
+    color: #8b949e;
+    border-left-color: #30363d;
+  }
+  pre, :not(pre) > code {
+    background-color: #161b22;
+    border-color: #30363d;
+  }
+  hr {
+    background-color: #30363d;
+  }
+  a {
+    color: #4493f8;
+  }
+  a:hover {
+    color: #79c0ff;
+  }
+}
+
+  </style>
+</head>
+<body>
+<h1>Vostok Markdown Showcase</h1>
+<p>Welcome to the <strong>Vostok</strong> Markdown showcase. This document demonstrates all supported Markdown features rendered by the self-contained <code>md2html</code> converter CLI.</p>
+<p>Consecutive text lines in Markdown are automatically merged into a single paragraph. This sentence was written on a separate line in the source file, but it cleanly flows together with the sentence before it in the final HTML document.</p>
+<p>A blank line creates a clean paragraph separation.</p>
+<hr>
+<h2>Typography &amp; Inline Styling</h2>
+<p>You can format text with various inline styles:</p>
+<ul>
+<li><strong>Bold text</strong> using double asterisks</li>
+<li><em>Italic text</em> using single asterisks</li>
+<li><strong><em>Bold and italic text</em></strong> combined</li>
+<li><code>Inline code</code> using backticks</li>
+<li>Text with math equations like 3 * 5 * 7 and variables like <code>user_profile_id</code></li>
+</ul>
+<p>You can also combine formatting, such as <strong>bold text with <em>italic</em> inside</strong>, or <em>italic text with <strong>bold</strong> inside</em>.</p>
+<hr>
+<h2>Headings</h2>
+<p>All six standard heading levels are supported:</p>
+<h1>Heading Level 1</h1>
+<h2>Heading Level 2</h2>
+<h3>Heading Level 3</h3>
+<h4>Heading Level 4</h4>
+<h5>Heading Level 5</h5>
+<h6>Heading Level 6</h6>
+<hr>
+<h2>Code Blocks</h2>
+<p>Fenced code blocks use triple backticks (<code>```</code>) and render inside <code>&lt;pre&gt;&lt;code&gt;</code> elements.</p>
+<h3>Python Example</h3>
+<pre><code class="language-python">def fibonacci(n: int) -&gt; list[int]:
+    &quot;&quot;&quot;Generate Fibonacci sequence up to n terms.&quot;&quot;&quot;
+    if n &lt;= 0:
+        return []
+    sequence = [0, 1]
+    while len(sequence) &lt; n:
+        sequence.append(sequence[-1] + sequence[-2])
+    return sequence[:n]
+
+print(fibonacci(8))</code></pre>
+<h3>Generic Plain Code Block</h3>
+<pre><code>$ md2html input.md -o output.html --title &quot;Custom Title&quot;
+[INFO] Parsed 42 blocks successfully.</code></pre>
+<hr>
+<h2>Lists</h2>
+<h3>Unordered Lists</h3>
+<ul>
+<li>First item in the list</li>
+<li>Second item with <strong>bold text</strong> and <code>inline code</code>
+<ul>
+<li>Nested sub-item A</li>
+<li>Nested sub-item B with <em>italics</em></li>
+</ul>
+</li>
+<li>Third top-level item</li>
+</ul>
+<h3>Ordered Lists</h3>
+<ol>
+<li>Initialize your project environment</li>
+<li>Install dependencies (standard library only — zero external packages required!)
+<ul>
+<li>Verify Python 3.10+ is installed</li>
+<li>Clone the repository</li>
+</ul>
+</li>
+<li>Run the CLI tool:
+<ul>
+<li><code>python3 md2html.py input.md -o output.html</code></li>
+</ul>
+</li>
+<li>Inspect the generated standalone HTML5 page</li>
+</ol>
+<hr>
+<h2>Blockquotes</h2>
+<p>Blockquotes are styled with an elegant left border:</p>
+<blockquote>
+<p>"Simplicity is prerequisite for reliability." — Edsger W. Dijkstra</p>
+</blockquote>
+<p>Blockquotes can also contain multiple paragraphs and nested quotes:</p>
+<blockquote>
+<p>The first paragraph of an extended quotation.</p>
+<blockquote>
+<p>A nested quotation within the blockquote highlighting an important detail.</p>
+</blockquote>
+<p>Returning to the main quote paragraph with continued discussion.</p>
+</blockquote>
+<hr>
+<h2>Links &amp; Images</h2>
+<p>You can create hyperlinks and embed images:</p>
+<ul>
+<li>Visit the <a href="https://github.com/example/vostok">Vostok Project Repository</a> for updates.</li>
+<li>Check out <a href="https://www.markdownguide.org">Markdown Guide</a> to learn more.</li>
+</ul>
+<p>Here is an example image:</p>
+<p><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&amp;auto=format&amp;fit=crop" alt="Vostok Exploration" title="Earth from Orbit"></p>
+<p>You can also nest an image inside a clickable link:</p>
+<p><a href="https://images.unsplash.com"><img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600&amp;auto=format&amp;fit=crop" alt="Clickable Orbit" title="Click to explore"></a></p>
+</body>
+</html>
